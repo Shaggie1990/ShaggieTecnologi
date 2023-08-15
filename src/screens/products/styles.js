@@ -5,14 +5,20 @@ import { COLORS } from '../../themes';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.background,
+    marginHorizontal: 20,
   },
-  categoryContainer: {
-    marginTop: 15,
-    marginHorizontal: 15,
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
   },
-  listCategory: {
-    gap: 15,
-    paddingBottom: 20,
+  goBack: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 10,
+  },
+  goBackText: {
+    fontSize: 14,
+    color: COLORS.text,
   },
 });

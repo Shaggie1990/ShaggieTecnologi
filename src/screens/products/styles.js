@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { COLORS } from '../../themes';
+import { COLORS, FONTS } from '../../themes';
 
 export const styles = StyleSheet.create({
   container: {
@@ -19,6 +19,7 @@ export const styles = StyleSheet.create({
   },
   goBackText: {
     fontSize: 14,
+    fontFamily: FONTS.bold,
     color: COLORS.text,
   },
   products: {
@@ -28,7 +29,10 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
   },
-  notFoundText: {},
+  notFoundText: {
+    fontFamily: FONTS.bold,
+    fontSize: 20,
+  },
   clearIcon: {
     position: 'absolute',
     zIndex: 2,

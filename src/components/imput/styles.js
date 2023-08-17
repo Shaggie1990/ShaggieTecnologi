@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { COLORS } from '../../themes';
+import { COLORS, FONTS } from '../../themes';
 
 export const styles = StyleSheet.create({
   container: {
@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 10,
     color: COLORS.black,
     fontSize: 14,
+    fontFamily: FONTS.medium,
     height: 35,
   },
 });

@@ -1,0 +1,13 @@
+import { View, Text } from "react-native";
+
+import { style } from "./styles";
+
+const Orders = () => {
+    return (
+        <View style={style.container}>
+            <Text>Orders</Text>
+        </View>
+    )
+};
+
+export default Orders;

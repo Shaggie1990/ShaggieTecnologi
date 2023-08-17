@@ -12,12 +12,12 @@ function Product({ navigation, route }) {
   const [search, setSearch] = useState('');
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [borderColor, setBorderColor] = useState(COLORS.primary);
-  const onHandleBlur = () => { };
+  const onHandleBlur = () => {};
   const onHandleChangeText = (text) => {
     setSearch(text);
     filterBySearch(text);
   };
-  const onHandleFocus = () => { };
+  const onHandleFocus = () => {};
 
   const filteredProductsByCategory = PRODUCTS.filter(
     (product) => product.categoryId === categoryId
@@ -36,6 +36,10 @@ function Product({ navigation, route }) {
   const clearSearch = () => {
     setSearch('');
     setFilteredProducts([]);
+  };
+
+  const onSelectProduct = ({ productId, name }) => {
+    navigation.navigate('ProductDetail', { productId, color, name });
   };
 
   return (
@@ -63,7 +67,9 @@ function Product({ navigation, route }) {
         style={styles.products}
         data={search.length > 0 ? filteredProducts : filteredProductsByCategory}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => null} style={styles.productContainer}>
+          <TouchableOpacity
+            onPress={() => onSelectProduct({ productId: item.id, name: item.name })}
+            style={styles.productContainer}>
             <ImageBackground
               source={{ uri: item.image }}
               style={[styles.productImage, { backgroundColor: color }]}

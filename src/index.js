@@ -6,10 +6,7 @@ import RootNavigator from './navigations';
 import { store } from './store';
 import { FONTS, COLORS } from './themes';
 
-// const categoryDefault = {
-//   categoryId: null,
-//   color: COLORS.primary,
-// };
+
 export default function App() {
   const [loaded] = useFonts({
     [FONTS.regular]: require('../assets/fonts/ChakraPetch-Regular.ttf'),
@@ -18,19 +15,6 @@ export default function App() {
     [FONTS.light]: require('../assets/fonts/ChakraPetch-Light.ttf'),
   });
 
-  // const [isCategorySelected, setIsCategorySelected] = useState(false);
-  // const [selectedCategory, setSelectedCategory] = useState(categoryDefault);
-
-  // const headerTitle = isCategorySelected ? 'Products' : 'Categories';
-
-  // const onHandleSelectCategory = ({ categoryId, color }) => {
-  //   setSelectedCategory({ categoryId, color });
-  //   setIsCategorySelected(!isCategorySelected);
-  // };
-  // const onHandleNavigate = () => {
-  //   setIsCategorySelected(!isCategorySelected);
-  //   setSelectedCategory(categoryDefault);
-  // };
 
   if (!loaded) {
     return (
@@ -42,9 +26,9 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <SafeAreaView style={styles.container}>
+      <View style={styles.container}>
         <RootNavigator />
-      </SafeAreaView>
+      </View>
     </Provider>
   );
 }

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { styles } from './styles';
 import { CategoryItem } from '../../components';
 
-import { ORIENTATION } from '../../constants/data/data/orientation';
+import { ORIENTATION } from '../../constants/orientation';
 import useOrientation from '../../hooks/useOrientation';
 import { useGetCategoriesQuery } from '../../store/categories/api';
 import { COLORS } from '../../themes';
@@ -23,7 +23,7 @@ function Categories({ navigation }) {
       </View>
     );
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.container}>
         <FlatList
           data={data}
@@ -46,7 +46,7 @@ function Categories({ navigation }) {
           showsVerticalScrollIndicator={false}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 

@@ -6,6 +6,15 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
+    emptyCartContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems:'center',
+    },
+    emptyCartText: {
+        fontFamily: FONTS.bold,
+        fontSize: 20,
+    },
     listContainer: {
         flex: 1,
         backgroundColor: COLORS.white,

@@ -47,16 +47,25 @@ function ShopNavigator() {
                 })}
             />
             <Stack.Screen
-                name="SettingsStack"
-                component={SettingsNavigator}
+                name="ProductDetail"
+                component={ProductDetail}
                 options={({ navigation, route }) => ({
+                    headerStyle: {
+                        backgroundColor: route.params.color,
+                    },
                     headerLeft: () => (
                         <TouchableOpacity style={styles.goBack} onPress={() => navigation.goBack()}>
                             <Ionicons name="arrow-back-circle" size={30} color={COLORS.white} />
                         </TouchableOpacity>
                     ),
-                    title: 'Settings',
-                    headerRight: null,
+                    title: route.params.name,
+                })}
+            />
+            <Stack.Screen
+                name="SettingsStack"
+                component={SettingsNavigator}
+                options={({ navigation, route }) => ({
+                    headerShown: false,
                 })}
             />
         </Stack.Navigator>

@@ -14,6 +14,7 @@ export const styles = StyleSheet.create({
         maxWidth: 400,
         padding: 15,
         margin: 15,
+        minHeight: 350,
         backgroundColor: COLORS.white,
         borderWidth: 1,
         borderColor: COLORS.primary,
@@ -28,24 +29,11 @@ export const styles = StyleSheet.create({
         borderRadius: 5,
     },
     header: {
-        fontFamily: FONTS.bold,
+        fontFamily: FONTS.medium,
         fontSize: 16,
         textAlign: 'center',
         color: COLORS.text,
         paddingVertical: 10,
-    },
-    label: {
-        fontFamily: FONTS.regular,
-        fontSize: 14,
-        color: COLORS.text,
-    },
-    input: {
-        height: 45,
-        borderBottomColor: COLORS.primary,
-        borderBottomWidth: 1,
-        width: '90%',
-        fontFamily: FONTS.regular,
-        marginBottom: 5,
     },
     linkContainer: {
         justifyContent: 'center',
@@ -66,6 +54,14 @@ export const styles = StyleSheet.create({
     },
     button: {
         backgroundColor: COLORS.secodary,
+        width: 200,
+        height: 35,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 5,
+    },
+    buttonDisabled: {
+        backgroundColor: COLORS.gray,
         width: 200,
         height: 35,
         justifyContent: 'center',

@@ -36,9 +36,9 @@ export const styles = StyleSheet.create({
     },
     header: {
         fontFamily: FONTS.bold,
-        fontSize: 22,
+        fontSize: 26,
         textAlign: 'center',
-        color: COLORS.text,
+        color: COLORS.white,
         paddingVertical: 10,
     },
     linkContainer: {

@@ -72,7 +72,7 @@ const Auth = () => {
         <KeyboardAvoidingView style={styles.containerKeyboardAvoidingView} behavior="height">
             <View style={styles.container}>
                 <ImageBackground
-                    source={{ uri: 'https://images.unsplash.com/photo-1554034483-04fda0d3507b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80' }}
+                    source={{ uri: 'https://images.unsplash.com/photo-1588420343618-6141b3784bce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1412&q=80' }}
                     style={styles.imageBackground}
                     resizeMode="cover">
                     <Text style={styles.header}>{headerTitle}</Text>
